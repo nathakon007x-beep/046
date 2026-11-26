@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>หน้าแรก | เที่ยวบ้านเรา</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+	<p class="site-name">เที่ยวบ้านเรา</p>
+	<nav aria-label="เมนูหลัก">
+		<ul>
+			<li><a href="index.html" aria-current="page">หน้าแรก</a></li>
+			<li><a href="places.html">ที่เที่ยว</a></li>
+			<li><a href="food.html">อาหาร</a></li>
+			<li><a href="plan.html">วางแผนเที่ยว</a></li>
+			<li><a href="travel.html">ข้อมูลการเดินทาง</a></li>
+			<li><a href="login.html">เข้าสู่ระบบ</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<h1>เที่ยวบ้านเราในหนึ่งวัน</h1>
+
+<body>
+
+    <!-- เนื้อหาเว็บไซต์ -->
+
+    <!-- สไลด์ภาพ -->
+    <center>
+        <h2>สถานที่ท่องเที่ยวจังหวัดประจวบคีรีขันธ์</h2>
+
+        <div id="slideshow"
+             style="position:relative; width:1000px; max-width:100%;">
+
+            <img id="slideImage"
+                 src="images/Kaow.jpg"
+                 alt="สถานที่ท่องเที่ยว"
+                 width="700"
+                 height="350"
+                 style="width:100%; height:350px; object-fit:cover;">
+
+       
+            <div id="dots" style="margin:10px;"></div>
+
+        </div>
+    </center>
+
+    <!-- JavaScript สำหรับเปลี่ยนภาพ -->
+    <script>
+    const images = [
+        "images/Kaow.jpg",
+        "images/KLM.jpg",
+        "images/aomanow.jpg",
+        "images/sapanpla.jpg",
+        "images/lukmuang.jpg"
+    ];
+
+    let current = 0;
+
+    function showSlide() {
+
+        // เปลี่ยนภาพในสไลด์
+        document.getElementById("slideImage").src = images[current];
+
+        // แสดงขีดเฉพาะภาพที่กำลังแสดง
+        document.getElementById("dots").innerHTML =
+            images.map((img, i) => `
+                <span onclick="goSlide(${i})"
+                      style="
+                          display:inline-block;
+                          width:${i === current ? '20px' : '8px'};
+                          height:8px;
+                          margin:4px;
+                          border-radius:${i === current ? '2px' : '50%'};
+                          background-color:${i === current ? '#333333' : '#cccccc'};
+                          cursor:pointer;
+                          transition:all 0.3s;
+                      ">
+                </span>
+            `).join("");
+    }
+
+    function nextSlide() {
+        current = (current + 1) % images.length;
+        showSlide();
+    }
+
+    function prevSlide() {
+        current = (current - 1 + images.length) % images.length;
+        showSlide();
+    }
+
+    function goSlide(index) {
+        current = index;
+        showSlide();
+    }
+
+    // เปลี่ยนภาพอัตโนมัติทุก 4 วินาที
+    setInterval(nextSlide, 4000);
+
+    showSlide();
+</script>
+
+</body>
+
+	<p>ชวนเดินตลาด ชิมอาหารพื้นถิ่น และพักชมวิวในชุมชน</p>
+	<section class="card">
+		<h2>เริ่มจากจุดที่คุณสนใจ</h2>
+		<p>เลือกสถานที่ที่อยากไป แล้วจัดเส้นทางให้เหมาะกับเวลาของคุณ</p>
+		<a class="button" href="places.html">ดูแหล่งท่องเที่ยว</a>
+	</section>
+</main>
+<footer>
+	<p>นายณฐกร นาคประเสริฐ 67219100046 | ใบงานฝึกปฏิบัติวิชาการสร้างเว็บไซต์ทางธุรกิจ</p>
+</footer>
+</body>
+</html>
