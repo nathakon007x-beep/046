@@ -6,12 +6,12 @@ margin: 0;
 font-family: system-ui, sans-serif;
 line-height: 1.65;
 color: #212121;        /*สีตัวอักษรที่แสดงผลในส่วนของเนื้อหาเว็บ*/
-background: #FFFFFF;    /*สีพื้นหลังของตัวเว็บ*/
+background: #ede7f6;    /*สีพื้นหลังของตัวเว็บ*/
 }
 header, footer {
 padding: 1rem;
 color: #000000;  
-background: #228B22;   /*สีพื้นหลังของส่วนหัวเว็บและท้ายเว็บ*/
+background: #9575cd;   /*สีพื้นหลังของส่วนหัวเว็บและท้ายเว็บ*/
 }
 .site-name {
 margin: 0 0 0.5rem;
@@ -29,11 +29,11 @@ list-style: none;
 nav a {
 display: block;
 padding: 0.35rem 0.75rem;
-color: #ffffff;   /*สีตัวอักษรบนเมนู*/
+color: white;   /*สีตัวอักษรบนเมนู*/
 border-radius: 0.35rem;
 }
 nav a:hover, nav a[aria-current="page"] {
-background: #F8E8D3;   /*พื้นหลังของเมนูเมื่อเอาเมาส์ไปวางชี้*/
+background: #e1bee7;   /*พื้นหลังของเมนูเมื่อเอาเมาส์ไปวางชี้*/
 color: #174c3c;
 }
 a:focus-visible {
@@ -49,7 +49,7 @@ margin: 1rem 0;
 padding: 1rem;
 border: 1px solid #d1e2d7;
 border-radius: 0.75rem;
-background: #FFF3D7;  /*สีพื้นหลังของกรอบcard*/
+background: #e1bee7;  /*สีพื้นหลังของกรอบcard*/
 }
 img {
 display: block;
@@ -61,7 +61,7 @@ border-radius: 0.5rem;
 display: inline-block;
 padding: 0.6rem 1rem;
 border-radius: 0.35rem;
-background: #228B22;  /*สีของปุ่ม*/
+background: #ab47bc;  /*สีของปุ่ม*/
 color: white;
 text-decoration: none;
 }
